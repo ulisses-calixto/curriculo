@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CardProjeto from '../components/CardProjeto.astro';
+---
+
+<Layout title="Ulisses| Currículo">
+	<main class="container">
+		<header class="hero">
+			<h1>Prazer, meu nome é Ulisses</h1>
+			<p>Graduando em Sistemas de Informação.</p>
+		</header>
+
+		<section id="projetos">
+			<h2>Meus Projetos</h2>
+			<div class="grid">
+				<CardProjeto 
+					title="PROJETO 1" 
+					description="Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum."
+					tags={['tag1', 'tag2', 'tag3']}
+				/>
+				<CardProjeto 
+					title="PROJETO 2" 
+					description="Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum."
+					tags={['tag1', 'tag2', 'tag3']}
+				/>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.container {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 2rem;
+	}
+	.hero {
+		text-align: center;
+		padding: 4rem 0;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	}
+	.text-gradient {
+		background-image: linear-gradient(45deg, var(--accent-color), #8b5cf6);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.hero p {
+		font-size: 1.25rem;
+		color: #475569;
+		margin-top: 1rem;
+	}
+	section {
+		margin-top: 4rem;
+	}
+	h2 {
+		font-size: 2rem;
+		margin-bottom: 2rem;
+	}
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+</style>

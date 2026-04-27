@@ -1,0 +1,59 @@
+---
+const anoAtual = new Date().getFullYear();
+---
+
+<footer class="footer">
+	<div class="container-footer">
+		<p>&copy; {anoAtual} Ulisses. Todos os direitos reservados.</p>
+		<div class="social-links">
+			<a href="#">LinkedIn</a>
+			<a href="#">GitHub</a>
+			<a href="mailto:seu-email@exemplo.com">E-mail</a>
+		</div>
+	</div>
+</footer>
+
+<style>
+	.footer {
+		background-color: white;
+		border-top: 1px solid #e2e8f0;
+		padding: 2rem 0;
+		margin-top: 4rem;
+	}
+	.container-footer {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 0 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+	p {
+		color: #64748b;
+		margin: 0;
+	}
+	.social-links {
+		display: flex;
+		gap: 1.5rem;
+	}
+	a {
+		color: var(--accent-color);
+		text-decoration: none;
+		font-weight: 500;
+		transition: color 0.2s ease;
+	}
+	a:hover {
+		color: #1e40af;
+		text-decoration: underline;
+	}
+
+	/* Responsividade para telas menores */
+	@media (max-width: 600px) {
+		.container-footer {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+</style>
